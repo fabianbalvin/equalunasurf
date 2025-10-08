@@ -25,7 +25,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-sky-50 text-slate-800">
       <Header />
-      <div className="flex flex-col md:flex-row container mx-auto p-4 md:p-8 gap-8">
+      <div className="flex flex-col md:flex-row container mx-auto px-4 py-6 sm:p-8 gap-8">
         <aside className="w-full md:w-1/4 lg:w-1/5">
           <Sidebar
             weeks={LESSON_PLAN}

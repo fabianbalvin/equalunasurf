@@ -58,7 +58,7 @@ const InteractiveGraph: React.FC<InteractiveGraphProps> = ({ points = [], lines 
   ];
 
   return (
-    <div className="w-full h-96 bg-slate-50 p-4 rounded-lg border border-slate-200">
+    <div className="w-full h-80 sm:h-96 bg-slate-50 p-4 rounded-lg border border-slate-200">
       <ResponsiveContainer>
         <LineChart
           data={lineData}

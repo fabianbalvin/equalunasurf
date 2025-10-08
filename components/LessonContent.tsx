@@ -39,15 +39,15 @@ const LessonContent: React.FC<LessonContentProps> = ({ weekTitle, lessons, activ
   return (
     <div>
         <div className="mb-6">
-            <h2 className="text-3xl font-bold text-slate-800">{weekTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">{weekTitle}</h2>
             <p className="text-slate-500">Dia {activeDay} de 5</p>
         </div>
-      <div className="flex border-b border-slate-200 mb-6">
+      <div className="flex border-b border-slate-200 mb-6 overflow-x-auto">
         {lessons.map((l) => (
           <button
             key={l.day}
             onClick={() => onSelectDay(l.day)}
-            className={`px-4 py-2 text-sm font-semibold transition-all duration-200 transform hover:-translate-y-0.5 ${
+            className={`px-4 py-2 text-sm font-semibold transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap ${
               activeDay === l.day
                 ? 'border-b-2 border-sky-500 text-sky-600'
                 : 'text-slate-500 hover:text-sky-500 border-b-2 border-transparent'
@@ -61,7 +61,7 @@ const LessonContent: React.FC<LessonContentProps> = ({ weekTitle, lessons, activ
       <Card>
         <div className="flex items-center gap-3 mb-4">
             <span className={lessonTypeColors[lesson.type]}>{lessonTypeIcons[lesson.type]}</span>
-            <h3 className={`text-2xl font-bold ${lessonTypeColors[lesson.type]}`}>{lesson.title}</h3>
+            <h3 className={`text-xl sm:text-2xl font-bold ${lessonTypeColors[lesson.type]}`}>{lesson.title}</h3>
         </div>
         <div className="prose max-w-none prose-p:text-slate-600 prose-li:text-slate-600">
             {lesson.type === 'quiz' && lesson.quiz ? (
