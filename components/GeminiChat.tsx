@@ -42,15 +42,15 @@ const GeminiChat: React.FC<GeminiChatProps> = ({ lessonTopic, lessonTitle }) => 
         setError(null);
 
         try {
-            // ATENÇÃO: A chave de API está inserida diretamente no código para fins de teste, conforme solicitado.
-            // Esta é uma prática insegura. Em um ambiente de produção, esta chave deve ser
-            // removida e carregada a partir de variáveis de ambiente (ex: process.env.API_KEY).
+            // AVISO DE SEGURANÇA: A chave de API está exposta diretamente no código.
+            // Isso é EXTREMAMENTE INSEGURO para produção.
+            // Remova esta chave e use variáveis de ambiente antes de publicar.
             const apiKey = "AIzaSyCxAK2qiaGpLYPx1YYx2cOB7QF5OqHaV8w";
 
             if (!apiKey) {
-                throw new Error("API Key não configurada.");
+                throw new Error("A chave de API do Gemini não foi encontrada. O administrador do site precisa configurar isso.");
             }
-            const ai = new GoogleGenAI({ apiKey: apiKey });
+            const ai = new GoogleGenAI({ apiKey });
 
             const systemInstruction = `Você é um tutor de matemática amigável e super paciente, chamado 'Gemini, o Mestre das Ondas'. Sua aluna é uma jovem campeã de surf. Use muitas gírias e analogias de surf para explicar conceitos de matemática. Mantenha as explicações claras, divertidas e encorajadoras. O tópico da aula de hoje é sobre ${lessonTopic}.`;
             
@@ -68,7 +68,9 @@ const GeminiChat: React.FC<GeminiChatProps> = ({ lessonTopic, lessonTitle }) => 
 
         } catch (err) {
             console.error(err);
-            const errorMessage = "Opa, deu um wipeout na minha conexão! Tente perguntar de novo em alguns instantes.";
+            const errorMessage = (err instanceof Error && err.message.includes("API"))
+                ? "Opa! Parece que a conexão com a IA não está configurada corretamente. Avise o responsável pelo site!"
+                : "Opa, deu um wipeout na minha conexão! Tente perguntar de novo em alguns instantes.";
             setError(errorMessage);
             setMessages(prev => [...prev, { sender: 'ai', text: errorMessage }]);
         } finally {
