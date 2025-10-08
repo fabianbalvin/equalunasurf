@@ -1,0 +1,22 @@
+{
+  "name": "surf-na-matematica",
+  "version": "1.0.0",
+  "description": "Um plano de aula interativo para uma jovem surfista aprender equações de primeiro grau.",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "typescript": "^5.4.5"
+  }
+}
