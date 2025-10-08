@@ -45,7 +45,7 @@ const GeminiChat: React.FC<GeminiChatProps> = ({ lessonTopic, lessonTitle }) => 
             // AVISO DE SEGURANÇA: A chave de API está exposta diretamente no código.
             // Isso é EXTREMAMENTE INSEGURO para produção.
             // Remova esta chave e use variáveis de ambiente antes de publicar.
-            const apiKey = "AIzaSyCxAK2qiaGpLYPx1YYx2cOB7QF5OqHaV8w";
+            const apiKey = "vAIzaSyCxAK2qiaGpLYPx1YYx2cOB7QF5OqHaV8w";
 
             if (!apiKey) {
                 throw new Error("A chave de API do Gemini não foi encontrada. O administrador do site precisa configurar isso.");
