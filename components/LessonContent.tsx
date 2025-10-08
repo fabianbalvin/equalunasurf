@@ -2,6 +2,7 @@ import React from 'react';
 import type { Lesson, LessonType } from '../types';
 import Card from './Card';
 import QuizComponent from './QuizComponent';
+import GeminiChat from './GeminiChat';
 import BookIcon from './icons/BookIcon';
 import GameIcon from './icons/GameIcon';
 import LightbulbIcon from './icons/LightbulbIcon';
@@ -69,6 +70,9 @@ const LessonContent: React.FC<LessonContentProps> = ({ weekTitle, lessons, activ
             ) : (
                 lesson.content
             )}
+        </div>
+        <div className="mt-8 border-t pt-6">
+            <GeminiChat lessonTopic={weekTitle} lessonTitle={lesson.title} />
         </div>
       </Card>
     </div>

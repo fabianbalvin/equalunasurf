@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Week } from './types';
 import InteractiveGraph from './components/InteractiveGraph';
@@ -108,8 +107,7 @@ export const LESSON_PLAN: Week[] = [
         day: 4,
         title: "Jogo: Equilibrando a Prancha",
         type: 'quiz',
-        // FIX: Added content property to satisfy Lesson type.
-        content: null,
+        content: <></>,
         quiz: [
             { question: "Para equilibrar a prancha: x + 3 = 8. Qual o valor de x?", options: ["3", "8", "5", "11"], correctAnswerIndex: 2 },
             { question: "Equilíbrio total! 2 * x = 12. Qual o valor de x?", options: ["10", "6", "24", "2"], correctAnswerIndex: 1 },
@@ -209,8 +207,7 @@ export const LESSON_PLAN: Week[] = [
         day: 4,
         title: "Jogo: Caça ao Tesouro no Mar",
         type: 'quiz',
-        // FIX: Added content property to satisfy Lesson type.
-        content: null,
+        content: <></>,
         quiz: [
             { question: "Onde fica o ponto (2, 5)?", options: ["2 direita, 5 cima", "5 direita, 2 cima", "2 esquerda, 5 baixo", "5 esquerda, 2 cima"], correctAnswerIndex: 0 },
             { question: "Qual ponto está no eixo Y?", options: ["(3, 3)", "(5, 0)", "(0, 4)", "(-1, -1)"], correctAnswerIndex: 2 },
@@ -305,8 +302,7 @@ export const LESSON_PLAN: Week[] = [
         day: 4,
         title: "Jogo: Qual é a equação?",
         type: 'quiz',
-        // FIX: Added content property to satisfy Lesson type.
-        content: null,
+        content: <></>,
         quiz: [
             { question: "Na equação y = 3x - 2, qual a inclinação (coeficiente angular)?", options: ["y", "x", "3", "-2"], correctAnswerIndex: 2 },
             { question: "Na equação y = 5x + 8, onde a reta corta o eixo y?", options: ["No ponto 5", "No ponto 8", "Na origem", "Não corta"], correctAnswerIndex: 1 },
@@ -385,8 +381,7 @@ export const LESSON_PLAN: Week[] = [
         day: 3,
         title: "Desafio Final do Campeonato",
         type: 'quiz',
-        // FIX: Added content property to satisfy Lesson type.
-        content: null,
+        content: <></>,
         quiz: [
             { question: "O que a solução de um sistema de duas equações representa graficamente?", options: ["Onde as retas começam", "Onde as retas terminam", "Onde as retas se cruzam", "Onde as retas são mais inclinadas"], correctAnswerIndex: 2 },
             { question: "Se duas retas são paralelas, o que acontece com o sistema?", options: ["Tem uma solução", "Tem duas soluções", "Tem infinitas soluções", "Não tem solução"], correctAnswerIndex: 3 },
